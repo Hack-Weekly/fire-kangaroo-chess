@@ -1,10 +1,13 @@
 import './Home.css'
+import {Header} from '../Header/Header'
 
 export const Home = () => {
   return (
     <div id='homeComponent'>
-        <header>HEADER COMPONENT</header>
-        <main>
+        <header>
+            <Header />
+        </header>
+        <section id='homeMain'>
             <section id="chessNewsSection">
                 News Section (COMPONENT)
             </section>
@@ -21,7 +24,7 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
-        </main>
+        </section>
         <footer>FOOTER COMPONENT</footer>
     </div>
     

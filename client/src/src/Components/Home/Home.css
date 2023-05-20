@@ -5,30 +5,30 @@
     height: 100vh;
     width: 100%;
 }
-/* Temporary header styling  */
+
 header {
-    border: 1px solid green;
     text-align: center;
     width: 100%;
     height: 14vh;
 }
 
-main {
+#homeMain {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8%;
     width: 100%;
+    height: 76vh;
+    background-color: #9e2c2c;
 }
 
 #chessNewsSection {
-    border: 1px solid black;
     height: 62vh;
     width: 15%;
+    background-color: black;
 }
 
 #playChessSectionContainer {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +39,6 @@ main {
 }
 
 #quickStartSection {
-    border: 1px solid purple;
     width: 70%;
     height: 28vh;
 }
@@ -51,13 +50,11 @@ main {
 }
 
 .puzzleStatsBtn {
-    border: 1px solid brown;
     width: 30%;
     height: 12vh;
 }
 
 footer {
-    border: 1px solid green;
     text-align: center;
     width: 100%;
     height: 10vh;
