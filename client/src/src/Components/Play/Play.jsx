@@ -88,6 +88,11 @@ export const Play = () => {
               position={position.fen()} 
               onPieceDrop={onDrop}
               onSquareClick={handleSquareClick}
+              customSquareStyles={{
+                ...highlightedSquares.reduce((acc, cur) => ({ ...acc, [cur]: { backgroundColor: 'rgba(158,44,44,0.5)' } }), {}),
+              }}
+              customDarkSquareStyle={{backgroundColor: 'rgb(131, 65, 65)'}}
+              customLightSquareStyle={{backgroundColor: 'rgb(235, 148, 148)'}}
             />
         </section>  
     </div>
