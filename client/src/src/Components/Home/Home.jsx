@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 import './Home.css'
 import {Header} from '../Header/Header'
 import {Articles} from '../Articles/Articles'
-
+import QuickStartSection from './Quick Start Section/QuickStartSection'
 export const Home = () => {
 
     const [article, setArticle] = useState("");
@@ -47,10 +47,10 @@ export const Home = () => {
                 <h4>Chess Feed</h4>
                 <Articles article={article} isLoading={isLoading} isError={isError} fetchData={fetchData}/>
             </section>
-            <section id='playChessSectionContainer'>
-                <div id='quickStartSection'>
-                    Quick Start Section (COMPONENT)
-                </div>
+
+         <section id="playChessSectionContainer">
+                <QuickStartSection/>
+
                 <div id='puzzleAndStatsSection'>
                     <div className='puzzleStatsBtn'>
                         Puzzle of the day

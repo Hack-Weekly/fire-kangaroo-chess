@@ -58,24 +58,65 @@ header {
 }
 
 #playChessSectionContainer {
+    padding-top: 14px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10%;
     align-items: center;
-    height: 62vh;
+    height: 100%;
     width: 50%;
+
+}
+#quickStartSectionContainer{
+    flex-direction: column;    
+    text-align: center; 
+    width: 75%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
 }
 
 #quickStartSection {
-    width: 70%;
-    height: 28vh;
+    color: white;
+    font-size: 30px;
+    letter-spacing: inherit;
+    font-weight: 600;
+    text-align: center;
+    
+    
 }
+button {
+    font-size: 30px;
+    --c:  red; /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    transition: background-size .4s, background-position 0s .4s;
+  }
+  button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+  }
+  button:active {
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--c);
+    color: #fff;
+  }
+  
+
+
 
 #puzzleAndStatsSection {
     display: flex;
     justify-content: space-around;
     width: 70%;
+    height: 100%;
 }
 
 .puzzleStatsBtn {
@@ -88,3 +129,103 @@ footer {
     width: 100%;
     height: 10vh;
 }
+.lobby__app__content {
+    flex: 1 1 100%;
+    position: relative;
+    
+
+}
+
+@media (min-width: 320px) {
+.lpools {
+    font-size: calc( 14px + 11 * ((100vw - 320px) / 880) );
+}
+}
+.lpools > div {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  
+.lpools{
+    font-size: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin-top: 20px;
+    grid-gap: 9px;
+    padding: 9px;
+    height: 740px;
+    text-align: center;
+    
+}
+
+
+.lpools .perf::before{
+    content: "\A";
+  white-space: pre;
+}
+.lobby__box,
+.lobby__spotlights,
+.ublog-post-card,
+.lobby__support a,
+.lobby__app__content {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    
+}
+.lobby__streams .more,
+.timeline .more,
+.timeline .entry,
+.lobby__streams .stream,
+.hooks__list th,
+.lpools,
+.ublog-post-card__intro,
+.tabs-horiz span {
+    font-family: "Roboto", Sans-Serif;
+    flex: autos;
+    
+}
+
+
+user agent stylesheet
+div {
+    display: block;
+    
+}
+
+
+
+
+@media (min-width: 799.3px) {
+    body {
+        --main-margin: 1vw;
+        margin-bottom: 2vmin;
+        
+        
+    }
+}
+
+
+
+
+
+html {
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    min-height: 100%;
+    color-scheme: dark;
+    font-family: "Noto Sans", Sans-Serif;
+}
+
+
+
+
+
+
