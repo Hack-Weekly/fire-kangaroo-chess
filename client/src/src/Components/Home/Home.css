@@ -68,6 +68,7 @@ header {
     width: 75%;
     padding-bottom: 20px;
     padding-top: 20px;
+    
 }
 
 #quickStartSection {
@@ -218,10 +219,6 @@ html {
     font-family: "Noto Sans", Sans-Serif;
 }
 
-.clock, .perf{
-
-   
-}
 
 
 
