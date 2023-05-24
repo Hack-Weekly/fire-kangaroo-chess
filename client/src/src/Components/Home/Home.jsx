@@ -43,11 +43,11 @@ export const Home = () => {
             <Header />
         </header>
         <section id='homeMain'>
-            <section id="chessNewsSection">
+            <section id='chessNewsSection'>
                 <h4>Chess Feed</h4>
                 <Articles article={article} isLoading={isLoading} isError={isError} fetchData={fetchData}/>
             </section>
-            <section id="playChessSectionContainer">
+            <section id='playChessSectionContainer'>
                 <div id='quickStartSection'>
                     Quick Start Section (COMPONENT)
                 </div>
