@@ -2,8 +2,26 @@ h4 {
     color: white;
 }
 
+.statusMsg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-text:before,
+.loading-text:after {
+  content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0'; /* non-breaking spaces */
+}
+
+.loading-text {
+  display: inline-block;
+}
+
 .articles {
     text-align: center;
     color: white;
     padding: 0.1rem;
 }
+
+  
+  

@@ -1,13 +1,16 @@
-import './App.css';
-import {Home} from './Components/Home/Home'
+import './App.css'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import HomePage from './pages/Home'
+import PlayPage from './pages/Play'
 
 function App() {
   return (
-    <div>
-      <main>
-        <Home />
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/play' element={<PlayPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
