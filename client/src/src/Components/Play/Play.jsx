@@ -1,33 +1,81 @@
 import './Play.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Header } from '../Header/Header';
 import { Chessboard } from 'react-chessboard';
 import { Chess } from 'chess.js';
 
 export const Play = () => {
 
-  const [position, setPosition] = useState(new Chess())
+  const [position, setPosition] = useState(new Chess());
+  const [selectedSquare, setSelectedSquare] = useState(null);
+  const [highlightedSquares, setHighlightedSquares] = useState([]);
 
-  useEffect(() => {
-    // If it's computer's turn make a move
-    if (position.turn() === 'b') {
-      const possibleMoves = position.moves();
+  const makeComputerMove = () => {
+    const possibleMoves = position.moves();
+    const randomMove = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
+    const newComputerPosition = new Chess(position.fen())
+    newComputerPosition.move(randomMove)
+    setPosition(newComputerPosition)
+  };
 
-      const randomMove = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
+  const handleSquareClick = (square) => {
+    const piece = position.get(square);
 
-      const newComputerPosition = new Chess(position.fen())
-      newComputerPosition.move(randomMove)
-      setPosition(newComputerPosition)
+    if (piece && piece.color === position.turn()) {
+      const possibleMoves = position.moves({ square, verbose: true});
+
+      const highlightedSquares = possibleMoves.map((move) => move.to);
+      setSelectedSquare(square);
+      setHighlightedSquares(highlightedSquares);
+      console.log(selectedSquare)
+      console.log(highlightedSquares)
+    } else {
+      setSelectedSquare(null);
+      setHighlightedSquares([]);
     }
-  }, [position])
+
+    if (selectedSquare && highlightedSquares.includes(square)) {
+      const move = position.move({
+        from: selectedSquare,
+        to: square,
+        promotion: 'q'
+      });
+
+      if (move) {
+        setPosition(position);
+        setSelectedSquare(null);
+        setHighlightedSquares([]);
+        if (position.isGameOver()) {
+          alert('Game Over');
+        } else {
+          makeComputerMove();
+        }
+      }
+    }
+  }
 
   const onDrop = (source, target) => {
-    const newPosition = new Chess(position.fen())
+    let move
+    try {
+        move = position.move({
+        from: source,
+        to: target,
+        promotion: 'q',
+      });
+    } catch (e) {
+      console.log(e)
+    }
 
-    newPosition.move({ from: source, to: target, promotion: 'q' }) 
-
-    setPosition(newPosition)
-    console.log(position.ascii())
+    if (move) {
+      setPosition(position);
+      setSelectedSquare(null);
+      setHighlightedSquares([]);
+      if (position.isGameOver()) {
+        alert('Game over');
+      } else {
+        makeComputerMove();
+      }
+    }
   }
 
   return (
@@ -36,7 +84,11 @@ export const Play = () => {
             <Header />
         </header>
         <section id='chessBoard'>
-            <Chessboard position={position.fen()} onPieceDrop={onDrop} />
+            <Chessboard 
+              position={position.fen()} 
+              onPieceDrop={onDrop}
+              onSquareClick={handleSquareClick}
+            />
         </section>  
     </div>
   )
