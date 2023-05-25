@@ -36,7 +36,7 @@ export const Home = () => {
             setIsLoading(true)
         }
     }, [article])
-
+    
   return (
     <div id='homeComponent'>
         <header>
@@ -51,6 +51,7 @@ export const Home = () => {
                 <QuickStartSection/>
 
                 <div id='puzzleAndStatsSection'>
+
                     <div className='puzzleStatsBtn'>
                         Puzzle of the day
                     </div>
