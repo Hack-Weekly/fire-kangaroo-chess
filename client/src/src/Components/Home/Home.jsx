@@ -36,6 +36,20 @@ export const Home = () => {
             setIsLoading(true)
         }
     }, [article])
+
+    useEffect(() => {
+        let request = new XMLHttpRequest();
+        request.open('GET', 'https://chesspuzzle.net/Daily/Api', true);
+        request.onload = function () {
+          if (request.status >= 200 && request.status < 400) {
+            let result = JSON.parse(request.responseText);
+            document.getElementById("puzzleText").textContent = result.Text;
+            document.getElementById("puzzleLink").href = result.Link;
+            document.getElementById("puzzleImage").src = result.Image;
+          }
+        };
+        request.send();
+      }, []);
     
   return (
     <div id='homeComponent'>
@@ -48,20 +62,23 @@ export const Home = () => {
                 <Articles article={article} isLoading={isLoading} isError={isError} fetchData={fetchData}/>
             </section>
             <section id="playChessSectionContainer">
-                <QuickStartSection/>
-
-                <div id='puzzleAndStatsSection'>
-
-                    <div className='puzzleStatsBtn'>
-                        Puzzle of the day
-                    </div>
-                    <div className='puzzleStatsBtn'>
-                        Stats
-                    </div>
+                <div id='quickStartContainer'>
+                    <QuickStartSection/>
+                </div>
+                
+                <div className='puzzleStatsBtn'>
+                    <a id="puzzleLink" href="https://chesspuzzle.net/Daily" target='_blank'>
+                        <img id="puzzleImage" alt="Daily Chess Puzzle" />
+                    </a>
+                    <div>
+                        <h3>Puzzle Of The Day</h3>  
+                        <h4><span id="puzzleText" /></h4>
+                    </div>   
                 </div>
             </section>
         </section>
-        <footer>FOOTER COMPONENT</footer>
+        <footer>
+        </footer>
     </div>
     
   )

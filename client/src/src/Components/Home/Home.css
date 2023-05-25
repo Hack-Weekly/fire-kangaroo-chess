@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8%;
+    gap: 3%;
     width: 100%;
     height: 76vh;
     background-color: #9e2c2c;
@@ -36,10 +36,6 @@ header {
     overflow-y: scroll;
     
 }
-
-
-
-
 
 #chessNewsSection::-webkit-scrollbar {
     width: 0.25rem;
@@ -67,27 +63,28 @@ header {
 }
 
 #playChessSectionContainer {
-    width: 50%;
-}
-#puzzleAndStatsSection {
     display: flex;
-    justify-content: space-around;
-    width: 850px;
-    height: 200px;
-   
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+}
+
+#quickStartContainer {
+    width: 100%;
 }
 
 .puzzleStatsBtn {
-    width: 30%;
-    height: 12vh;
-    font-size: 2.5rem;
-    color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 1.4rem;
+    color: white;
 }
 
+#puzzleImage {
+    max-width: 85%;
+    padding-bottom: 25px;
+}
 
 footer {
     text-align: center;
@@ -116,13 +113,11 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3);
-    margin-top: 20px;
     grid-gap: 9px;
     padding: 9px;
-    height: 500px;
+    height: 250px;
     text-align: center;
     background-color: transparent;
-    
 }
 
 
