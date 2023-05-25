@@ -52,6 +52,7 @@ export const Home = () => {
                 <QuickStartSection/>
 
                 <div id='puzzleAndStatsSection'>
+                
                     <div className='puzzleStatsBtn'>
                         Puzzle of the day
                     </div>
