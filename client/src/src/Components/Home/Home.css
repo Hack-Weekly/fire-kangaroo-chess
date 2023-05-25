@@ -23,10 +23,15 @@ header {
 }
 
 #chessNewsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 62vh;
-    width: 25%;
+    width: fit-content;
+    max-width: 18.5rem;
     text-align: center;
     background-color: black;
+    border-radius: 0.3rem;
     overflow-x: hidden;
     overflow-y: scroll;
     align-items: center;
@@ -48,7 +53,7 @@ header {
 
 #chessNewsSection h4 {
     font-size: 1.5rem;
-    text-align: left;
+    align-self: flex-start;
     margin-left: 6%;
     margin-top: 6%;
     margin-bottom: 0;

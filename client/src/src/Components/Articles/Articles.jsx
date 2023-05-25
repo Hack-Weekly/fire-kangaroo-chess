@@ -4,10 +4,14 @@ import './Articles.css'
 export const Articles = ({ article, isLoading, isError, fetchData }) => {
 
     if (isLoading) {
-        return <h4>Loading...</h4>
+        return (
+            <section className='statusMsg'>
+                <h4 className='loading-text' >Loading...</h4>
+            </section>
+        )
     } else if (isError) {
         return (
-            <section>
+            <section className='statusMsg'>
                 <h4>Failed to load...</h4>
                 <button onClick={fetchData}>Try again</button>
             </section>
