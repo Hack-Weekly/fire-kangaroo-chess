@@ -59,7 +59,7 @@ const QuickStartSection = () => {
                     <Link to='/play/benjamin' className='aiLink'>
                         <div data-id="5+3">
                             <div className="clock">AI</div>
-                            <div className="clock">Benjamin</div>
+                            <div className="perf">Benjamin</div>
                         </div>
                     </Link>
                 </button>
