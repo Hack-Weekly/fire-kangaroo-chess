@@ -7,7 +7,7 @@ import './Grid.css';
 const QuickStartSection = () => {
     return (
     <div id='quickStartSection'>
-        <h4>Quick Start Section</h4>
+        <h4>Quick Start</h4>
         <div className='quickStartBtn'>
             <div className="lobby__app__content lpools">
                 <button>
