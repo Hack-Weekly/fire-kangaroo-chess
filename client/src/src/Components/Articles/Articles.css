@@ -6,6 +6,7 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .loading-text:before,
@@ -15,12 +16,15 @@ h4 {
 
 .loading-text {
   display: inline-block;
+  
 }
 
 .articles {
     text-align: center;
     color: white;
-    padding: 0.1rem;
+    padding: 0.8rem;
+    margin: .5rem;
+    font-size: 100px;
 }
 
   
