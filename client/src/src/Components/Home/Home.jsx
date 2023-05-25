@@ -36,7 +36,7 @@ export const Home = () => {
             setIsLoading(true)
         }
     }, [article])
-
+    
   return (
     <div id='homeComponent'>
         <header>

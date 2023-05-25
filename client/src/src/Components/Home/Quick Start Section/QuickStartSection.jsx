@@ -15,85 +15,45 @@ const QuickStartSection = () => {
 
                     <button>
                     <div data-id="1+0">
-                    <div class="clock">1+0</div>
-                    <div class="perf">Bullet</div>
+                    <div class="clock">AI</div>
+                    <div class="perf">Ethan</div>
                     </div>
                     </button>
 
                     <button>
                     <div data-id="2+1">
-                    <div class="clock">2+1</div>
-                    <div class="perf">Bullet</div>
+                    <div class="clock">AI</div>
+                    <div class="perf">Ava</div>
                     </div>
                     </button>
 
                     <button>
                     <div data-id="3+0">
-                    <div class="clock">3+0</div>
-                    <div class="perf">Blitz</div>
+                    <div class="clock">AI</div>
+                    <div class="perf">Ethan</div>
                     </div>
                     </button>
 
                     <button>
                     <div data-id="3+2">
-                    <div class="clock">3+2</div>
-                    <div class="perf">Blitz</div>
+                    <div class="clock">AI</div>
+                    <div class="perf">Sir Isaac</div>
                     </div>
                     </button>
                     <button>
                     <div data-id="5+0">
-                    <div class="clock">5+0</div>
-                    <div class="perf">Blitz</div>
+                    <div class="clock">AI</div>
+                    <div class="perf">Elijah</div>
                     </div>
                     </button>
 
                     <button>
                     <div data-id="5+3">
-                    <div class="clock">5+3</div>
-                    <div class="clock">Blitz</div>
+                    <div class="clock">AI</div>
+                    <div class="clock">Benjamin</div>
                     </div>
                     </button>
-
-                    <button>
-                    <div data-id="10+0">
-                    <div class="clock">10+0</div>
-                    <div class="perf">Rapid</div>
-                    </div>
-                    </button>
-
-                    <button>
-                    <div data-id="10+5">
-                    <div class="clock">10+5</div>
-                    <div class="perf">Rapid</div>
-                    </div>
-                    </button>
-
-                    <button>
-                    <div data-id="15+10">
-                    <div class="clock">15+10</div>
-                    <div class="perf">Rapid</div>
-                    </div>
-                    </button>
-
-                    <button>
-                    <div data-id="30+0">
-                    <div class="clock">30+0</div>
-                    <div class="perf">Classical</div>
-                    </div>
-                    </button>
-
-                    <button>
-                    <div data-id="30+20">
-                    <div class="clock">30+20</div>
-                    <div class="perf">Classical</div>
-                    </div>
-                    </button>
-
-                    <button>
-                    <div class="custom" data-id="custom">Custom</div>
-                    </button>
-                    </div>
-                    
+                </div>
                 </div>
                 </div>
                 </div>
